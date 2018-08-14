@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<style>
+			.con{
+				width:400px;
+				height:400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input type="range"  v-model="r" min='0' max='255'/>
+			<input type="range" v-model="g" min='0' max='255'/>
+			<input type="range" v-model="b" min='0' max='255' />
+			<div class="con" v-bind:style="{background:color}"></div>
+		</div>
+		<script>
+			new Vue({
+				el:'#app',
+				data:{
+					r:0,
+					g:0,
+					b:0
+				},
+			computed:{
+				color(){
+					return `rgb(${this.r},${this.g},${this.b})`
+				}
+			}
+			})
+		</script>
+	</body>
+</html>
