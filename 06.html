@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<style>
+		.con{
+			width:100px;
+			height:100px;
+			background: greenyellow;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<input type="number" v-model="w" />
+			<input type="number" v-model="h" />
+		<div class="con" v-bind:style="{width:w+'px',height:h+'px'}">qweqe</div>
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					w:100,
+					h:100
+				}
+			})
+		</script>
+	</body>
+</html>
