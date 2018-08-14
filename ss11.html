@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	</head>
+	<style>
+		.con{
+			width:400px;
+			height:400px;
+			background: greenyellow;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<input type="number" v-model="w" />
+			<input type="number" v-model="h" />
+		<div class="con" v-bind:style="whstyle">亲(づ￣3￣)づ╭❤～看什么看</div>
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					w:400,
+					h:400
+				},
+				computed:{
+					whstyle(){
+						return  {
+							width:this.w+'px',
+							height:this.h+'px'}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
